@@ -22,10 +22,14 @@ public class Ex5 {
 
 	public static double[] createArrays(int n) {
 		Random rd = new Random();
-		System.out.println("-Quantity elements of array:" + n);
+		System.out.println("-Elements of array:" + n);
 		double[] array = new double[n];
 		for (int i = 0; i < array.length; i++) {
-			array[i] = Math.round(rd.nextDouble() * 100.0) / 10.0;
+//			Random from rd var
+			double numberRandomA = (Math.round(rd.nextDouble() * 100.0)) / 10.0;
+//			Random form Math.random
+			double numberRandomB = Math.round(Math.random() * 100.0) / 10.0;
+			array[i] = Math.round(numberRandomA - numberRandomB);
 		}
 		return array;
 	}
