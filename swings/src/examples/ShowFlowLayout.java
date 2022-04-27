@@ -19,7 +19,7 @@ public class ShowFlowLayout extends JFrame {
 	public static void main(String[] args) {
 		ShowFlowLayout frame = new ShowFlowLayout();
 		frame.setTitle("ShowFlowLayout");
-		frame.setSize(00, 300);
+		frame.setSize(300, 300);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);

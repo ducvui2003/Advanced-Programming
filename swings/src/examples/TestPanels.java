@@ -29,7 +29,7 @@ public class TestPanels extends JFrame {
 	public static void main(String[] args) {
 		TestPanels frame = new TestPanels();
 		frame.setTitle("The Font View of a Microware Oven");
-		frame.setSize(500, 500);
+		frame.setSize(500,500);
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
