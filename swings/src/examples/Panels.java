@@ -6,8 +6,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.*;
 
-public class TestPanels extends JFrame {
-	public TestPanels() {
+public class Panels extends JFrame {
+	public Panels() {
 		JPanel p1 = new JPanel();
 		p1.setLayout(new GridLayout(4, 3));
 
@@ -27,7 +27,7 @@ public class TestPanels extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		TestPanels frame = new TestPanels();
+		Panels frame = new Panels();
 		frame.setTitle("The Font View of a Microware Oven");
 		frame.setSize(500,500);
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
