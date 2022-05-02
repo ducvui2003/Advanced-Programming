@@ -1,10 +1,10 @@
-package examples;
+package guiComponents;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class TestJButton extends JFrame {
+public class JButtonIcons extends JFrame {
 	ImageIcon usIcon = new ImageIcon(
 			"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\american_flag.gif");
 	ImageIcon caIcon = new ImageIcon(
@@ -13,7 +13,7 @@ public class TestJButton extends JFrame {
 			"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\german_flag.gif");
 
 //	Constructer
-	public TestJButton() {
+	public JButtonIcons() {
 		JButton jbtClick = new JButton("Click it", usIcon);
 		jbtClick.setPressedIcon(caIcon);
 		jbtClick.setRolloverIcon(geIcon);
@@ -21,7 +21,7 @@ public class TestJButton extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		TestJButton frame = new TestJButton();
+		JButtonIcons frame = new JButtonIcons();
 		frame.setTitle("Button Icon demo");
 		frame.setSize(300, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

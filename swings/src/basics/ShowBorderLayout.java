@@ -1,4 +1,4 @@
-package examples;
+package basics;
 
 import java.awt.BorderLayout;
 import javax.swing.*;

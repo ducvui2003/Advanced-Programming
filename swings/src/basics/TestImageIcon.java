@@ -1,4 +1,4 @@
-package examples;
+package basics;
 
 import java.awt.GridLayout;
 import javax.swing.ImageIcon;

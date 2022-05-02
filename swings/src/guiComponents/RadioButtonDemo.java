@@ -1,4 +1,4 @@
-package examples;
+package guiComponents;
 
 import java.awt.GridLayout;
 

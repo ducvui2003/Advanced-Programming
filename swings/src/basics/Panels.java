@@ -1,4 +1,4 @@
-package examples;
+package basics;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
