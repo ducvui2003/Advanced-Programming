@@ -1,4 +1,4 @@
-package eventDriven;
+package eventDriven.EventHandle;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
