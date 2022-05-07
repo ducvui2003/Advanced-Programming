@@ -1,14 +1,11 @@
-package eventDriven.EventHandle;
+package eventDriven;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
 
 public class OKListenerClass implements ActionListener {
-
-	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("OK Button click");
+		System.out.println("OK button click");
 
 	}
 }

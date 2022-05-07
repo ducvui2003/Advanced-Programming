@@ -1,4 +1,4 @@
-package eventDriven.InnerClass;
+package eventDriven;
 
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -10,13 +10,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import eventDriven.EventHandle.HandleEvent;
-
-public class MyInnerClassListener extends JFrame {
+public class Inner extends JFrame {
 	JButton btnSave, btnCancel;
 	JTextField txtNum1, txtNum2, txtResult;
 
-	public MyInnerClassListener() {
+	public Inner() {
 		super("My Inner Class Listener Demo");
 		setLayout(new FlowLayout());
 
@@ -36,6 +34,11 @@ public class MyInnerClassListener extends JFrame {
 				"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\save-icon.png"));
 		btnCancel.setIcon(new ImageIcon(
 				"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\cancel.png"));
+
+//		Add listener
+		MyListener lst = new MyListener();
+		btnSave.addActionListener(lst);
+		btnCancel.addActionListener(lst);
 	}
 
 	class MyListener implements ActionListener {
@@ -45,6 +48,7 @@ public class MyInnerClassListener extends JFrame {
 				double n1 = Double.parseDouble(txtNum1.getText());
 				double n2 = Double.parseDouble(txtNum2.getText());
 				txtResult.setText((n1 + n2) + "");
+//				System.out.println(txtResult);
 			} else {
 				System.exit(0);
 			}
@@ -52,10 +56,11 @@ public class MyInnerClassListener extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		MyInnerClassListener frame = new MyInnerClassListener();
+		Inner frame = new Inner();
 		frame.pack();
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		frame.setLocationRelativeTo(null);
 	}
+
 }
