@@ -1,19 +1,16 @@
 package basics;
 
 import java.awt.GridLayout;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class TestImageIcon extends JFrame {
-	private ImageIcon usIcon = new ImageIcon(
-			"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\american_flag.gif");
-	private ImageIcon caIcon = new ImageIcon(
-			"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\canada_flag.gif");
-	private ImageIcon geIcon = new ImageIcon(
-			"" + "D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\german_flag.gif");
-	private ImageIcon noIcon = new ImageIcon(
-			"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\norway_flag.gif");
+	private ImageIcon usIcon = new ImageIcon(getClass().getResource("..\\images\\american_flag.gif"));
+	private ImageIcon caIcon = new ImageIcon(getClass().getResource("..\\images\\canada_flag.gif"));
+	private ImageIcon geIcon = new ImageIcon(getClass().getResource("..\\images\\german_flag.gif"));
+	private ImageIcon noIcon = new ImageIcon(getClass().getResource("..\\images\\norway_flag.gif"));
 
 	public TestImageIcon() {
 		setLayout(new GridLayout(1, 4, 5, 5));

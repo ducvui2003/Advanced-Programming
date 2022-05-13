@@ -1,6 +1,5 @@
 package menu;
 
-import java.awt.CheckboxMenuItem;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
@@ -30,7 +29,7 @@ public class JMenuBarDemo {
 //		Create MenuItems
 		fileMenu.add(new JMenuItem("New"));
 		fileMenu.add(new JMenuItem("Open"));
-		fileMenu.addSeparator();
+		fileMenu.addSeparator();//line between 2 JMenus
 		fileMenu.add(new JMenuItem("Print"));
 		fileMenu.addSeparator();
 		fileMenu.add(new JMenuItem("Exit"));

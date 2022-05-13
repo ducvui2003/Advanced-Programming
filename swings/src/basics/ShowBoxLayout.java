@@ -2,6 +2,9 @@ package basics;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -12,18 +15,14 @@ import javax.swing.JPanel;
 public class ShowBoxLayout extends JFrame {
 	private JLabel jblFlag = new JLabel();
 	private ImageIcon imageIconAus = new ImageIcon(getClass().getResource(""));
-	private ImageIcon imageIconUs = new ImageIcon(
-			"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\american_flag.gif");
+	private ImageIcon imageIconUs = new ImageIcon(getClass().getResource("..\\images\\\\american_flag.gif"));
 	private ImageIcon imageIconCanada = new ImageIcon(getClass().getResource(""));
 	private ImageIcon imageIconNorway = new ImageIcon(getClass().getResource(""));
-	private ImageIcon imageIconGermany = new ImageIcon(
-			"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\germanyIcon.png");
-	private ImageIcon imageIconPrint = new ImageIcon(
-			"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\print-icon.png");
-	private ImageIcon imageIconSave = new ImageIcon(
-			"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\save-icon.png");
+	private ImageIcon imageIconGermany = new ImageIcon(getClass().getResource("..\\images\\\\germanyIcon.png"));
+	private ImageIcon imageIconPrint = new ImageIcon(getClass().getResource("..\\images\\print-icon.png"));
+	private ImageIcon imageIconSave = new ImageIcon(getClass().getResource("..\\images\\save-icon.png"));
 
-	private JButton jbtUS = new JButton("US		");
+	private JButton jbtUS = new JButton("US");
 	private JButton jbtCanada = new JButton("Canada	");
 	private JButton jbtAus = new JButton("Australia	");
 	private JButton jbtNorway = new JButton("Norway	");
@@ -42,7 +41,7 @@ public class ShowBoxLayout extends JFrame {
 
 		box1.add(new JButton(imageIconPrint));
 		box1.add(new JButton(imageIconSave));
-
+		
 		box2.add(jbtUS);
 		box2.add(jbtCanada);
 		box2.add(jbtAus);
