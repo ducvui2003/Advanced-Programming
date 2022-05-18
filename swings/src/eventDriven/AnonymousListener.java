@@ -3,21 +3,22 @@ package eventDriven;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class AnonymousListener extends JFrame {
 	public AnonymousListener() {
-		JButton btnNew = new JButton("New");
-		JButton btnOpen = new JButton("OK");
+		JButton btnNew = new JButton("New", new ImageIcon(getClass().getResource("..\\images\\new.png")));
+		JButton btnOpen = new JButton("Open",new ImageIcon(getClass().getResource("..\\images\\open.png")));
 		JPanel jButtons = new JPanel();
+		add(jButtons);
 		jButtons.add(btnNew);
 		jButtons.add(btnOpen);
-		add(jButtons);
 
-//		Create and register anonymous inner-class listener
-		btnNew.addActionListener(new ActionListener() {
+//		anonymous inner-class listener
+		btnNew.addActionListener(new ActionListener() {// class but no name
 
 			@Override
 			public void actionPerformed(ActionEvent e) {

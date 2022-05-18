@@ -5,6 +5,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -27,9 +28,13 @@ public class Ex3 extends JFrame {
 		bar.add(exit);
 
 		operation.add(subMenuAdd = new JMenuItem("Add"));
+		subMenuAdd.setIcon(new ImageIcon(getClass().getResource("..\\images\\addIcon.png")));
 		operation.add(subMenuSubtract = new JMenuItem("Subtract"));
+		subMenuSubtract.setIcon(new ImageIcon(getClass().getResource("..\\images\\subtractIcon.png")));
 		operation.add(subMenuMultiply = new JMenuItem("Multiply"));
+		subMenuMultiply.setIcon(new ImageIcon(getClass().getResource("..\\images\\multiplyIcon.png")));
 		operation.add(subMenuDivide = new JMenuItem("Divide"));
+		subMenuDivide.setIcon(new ImageIcon(getClass().getResource("..\\images\\divideIcon.png")));
 
 		operation.setMnemonic('O');
 		exit.setMnemonic('E');
@@ -58,13 +63,13 @@ public class Ex3 extends JFrame {
 
 		JPanel p2 = new JPanel(new FlowLayout());
 		add(p2);
-		JButton add = new JButton("Add");
+		JButton add = new JButton("Add", new ImageIcon(getClass().getResource("..\\images\\addIcon.png")));
 		p2.add(add);
-		JButton subtract = new JButton("Subtract");
+		JButton subtract = new JButton("Subtract",new ImageIcon(getClass().getResource("..\\images\\subtractIcon.png")));
 		p2.add(subtract);
-		JButton multiply = new JButton("Multiply");
+		JButton multiply = new JButton("Multiply",new ImageIcon(getClass().getResource("..\\images\\multiplyIcon.png")));
 		p2.add(multiply);
-		JButton divide = new JButton("Divide");
+		JButton divide = new JButton("Divide", new ImageIcon(getClass().getResource("..\\images\\divideIcon.png")));
 		p2.add(divide);
 
 	}
@@ -72,7 +77,7 @@ public class Ex3 extends JFrame {
 	public static void main(String[] args) {
 		Ex3 frame = new Ex3();
 		frame.setTitle("Calculator Using Menu");
-		frame.setSize(400, 200);
+		frame.pack();
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);

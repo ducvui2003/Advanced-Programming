@@ -10,11 +10,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class Inner extends JFrame {
+public class InnerClassListener extends JFrame {
 	JButton btnSave, btnCancel;
 	JTextField txtNum1, txtNum2, txtResult;
 
-	public Inner() {
+	public InnerClassListener() {
 		super("My Inner Class Listener Demo");
 		setLayout(new FlowLayout());
 
@@ -30,10 +30,8 @@ public class Inner extends JFrame {
 //		Buttons
 		add(btnSave = new JButton("Save"));
 		add(btnCancel = new JButton("Cancel"));
-		btnSave.setIcon(new ImageIcon(
-				"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\save-icon.png"));
-		btnCancel.setIcon(new ImageIcon(
-				"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\cancel.png"));
+		btnSave.setIcon(new ImageIcon(getClass().getResource("..\\images\\save-icon.png")));
+		btnCancel.setIcon(new ImageIcon(getClass().getResource("..\\images\\cancel.png")));
 
 //		Add listener
 		MyListener lst = new MyListener();
@@ -48,7 +46,6 @@ public class Inner extends JFrame {
 				double n1 = Double.parseDouble(txtNum1.getText());
 				double n2 = Double.parseDouble(txtNum2.getText());
 				txtResult.setText((n1 + n2) + "");
-//				System.out.println(txtResult);
 			} else {
 				System.exit(0);
 			}
@@ -56,7 +53,7 @@ public class Inner extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Inner frame = new Inner();
+		InnerClassListener frame = new InnerClassListener();
 		frame.pack();
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		frame.setVisible(true);

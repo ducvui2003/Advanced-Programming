@@ -15,19 +15,7 @@ public class MouseEventDemo extends JFrame implements MouseListener, MouseMotion
 		super(title);
 		tf = new JTextField(60);
 		addMouseListener(this);
-		addMouseMotionListener(new MouseMotionListener() {
-
-			@Override
-			public void mouseMoved(MouseEvent e) {
-			}
-
-			@Override
-			public void mouseDragged(MouseEvent e) {
-				double x = e.getX();
-				double y = e.getY();
-				repaint();
-			}
-		});
+		addMouseMotionListener(this);
 		setLayout(new BorderLayout());
 		add(tf, BorderLayout.SOUTH);
 		setSize(300, 300);

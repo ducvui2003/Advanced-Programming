@@ -28,7 +28,8 @@ public class HandleEvent extends JFrame {
 		btnCancel.addActionListener(respond);
 	}
 
-	 class ListenerClass implements ActionListener {
+//Method 1
+	class ListenerClass implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == btnOK)
 				System.out.println("OK button click");
@@ -37,11 +38,12 @@ public class HandleEvent extends JFrame {
 		}
 	}
 
-	public static void main(String[] args) {
-		HandleEvent frame = new HandleEvent();
-		frame.setSize(200, 200);
-		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		frame.setVisible(true);
-		frame.setLocationRelativeTo(null);
+		public static void main(String[] args) {
+			HandleEvent frame = new HandleEvent();
+			frame.setSize(200, 200);
+			frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+			frame.setVisible(true);
+			frame.setLocationRelativeTo(null);
+		}
 	}
-}
+
