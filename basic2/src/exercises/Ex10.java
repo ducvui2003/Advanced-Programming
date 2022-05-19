@@ -1,17 +1,14 @@
 package exercises;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class Ex10 {
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter day, month and year (dd/mm/yyyy): ");
-		System.out.print("day: ");
-		int day = input.nextInt();
-		System.out.print("month: ");
-		int month = input.nextInt();
-		System.out.print("year: ");
-		int year = input.nextInt();
+		Random rd = new Random();
+		int day = rd.nextInt(31);
+		int month = rd.nextInt(12);
+		int year = rd.nextInt(3000);
+		System.out.println(day + "/" + month + "/" + year);
 		if (month <= 12) {
 //			February
 			if (month == 2 && (year % 400 == 0 || year % 4 == 0) && day <= 29) {

@@ -1,12 +1,12 @@
 package exercises;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class Ex9 {
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter a int value smaller than 1000");
-		int number = input.nextInt();
+		Random rd = new Random();
+		int number = rd.nextInt(1000);
+		System.out.println("Number: "+number);
 		String number1Digit = "";
 		String number2Digit = "";
 		String number3Digit = "";

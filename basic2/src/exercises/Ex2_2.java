@@ -1,13 +1,18 @@
 package exercises;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class Ex2_2 {
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter month and year: ");
-		int month = input.nextInt();
-		int year = input.nextInt();
+		Random rd = new Random();
+		int month = rd.nextInt(11)+1;
+		System.out.println("Month: " + month);
+		int year = rd.nextInt(3000);
+		System.out.println("Year: " + year);
+		daysInMonth(month, year);
+	}
+
+	private static void daysInMonth(int month, int year) {
 		if (month <= 12) {
 			if (month == 2) {
 				if (year % 400 == 0 || year % 4 == 0)
@@ -18,7 +23,7 @@ public class Ex2_2 {
 				System.out.println("Days of month is 31 days");
 			else
 				System.out.println("Days of month is 30 days");
-		}else {
+		} else {
 			System.out.println("Not available");
 		}
 	}

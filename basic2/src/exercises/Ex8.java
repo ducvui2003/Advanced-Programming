@@ -1,12 +1,12 @@
 package exercises;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class Ex8 {
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		System.out.print("Enter a year: ");
-		int year = input.nextInt();
+		Random rd = new Random();
+		int year = rd.nextInt(2500);
+		System.out.print("Year: " + year+"\n");
 		String can = "";
 		String chi = "";
 		switch ((year - 3) % 10) {
