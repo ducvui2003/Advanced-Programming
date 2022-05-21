@@ -1,20 +1,31 @@
 package exercisesLoop;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class Ex8 {
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		System.out.print("Enter a number: ");
-		int number = input.nextInt();
-		long total = 0, multip = 1;
+		Random rd = new Random();
+		int number = rd.nextInt(10);
+		System.out.println("Number: " + number);
+
+		System.out.println("Total = " + total(number));
+
+		System.out.println(number + "! = " + factorial(number));
+	}
+
+	private static int total(int number) {
+		int total = 0;
 		for (int i = 1; i <= number; i++) {
 			total = total + i;
 		}
-		System.out.println("S = " + total);
+		return total;
+	}
+
+	private static int factorial(int number) {
+		int facrorial = 1;
 		for (int j = 1; j <= number; j++) {
-			multip = multip * j;
+			facrorial = facrorial * j;
 		}
-		System.out.println(number + "! = " + multip);
+		return facrorial;
 	}
 }

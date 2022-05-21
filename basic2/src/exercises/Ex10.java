@@ -9,6 +9,10 @@ public class Ex10 {
 		int month = rd.nextInt(12);
 		int year = rd.nextInt(3000);
 		System.out.println(day + "/" + month + "/" + year);
+		checkDate(day, month, year);
+	}
+
+	private static void checkDate(int day, int month, int year) {
 		if (month <= 12) {
 //			February
 			if (month == 2 && (year % 400 == 0 || year % 4 == 0) && day <= 29) {

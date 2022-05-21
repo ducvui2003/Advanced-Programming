@@ -37,7 +37,7 @@ public class Ex7 {
 	}
 
 //	Kiem tra doi xung phan tu cua mang
-	private static boolean checkSymmetry(double[] array) {
+	public static boolean checkSymmetry(double[] array) {
 		if (array.length % 2 != 1) {
 			for (int i = 0; i < (array.length / 2); i++) {
 				if (array[i] != array[(array.length - 1) - i]) {
@@ -50,7 +50,7 @@ public class Ex7 {
 	}
 
 //	Kiem tra dan dau phan tu cua mang
-	private static boolean checkKnittingSigns(double[] array) {
+	public static boolean checkKnittingSigns(double[] array) {
 		for (int i = 0; i < array.length - 1; i++) {
 			if ((array[i] >= 0 && array[i + 1] >= 0) || (array[i] < 0 && array[i + 1] < 0)) {
 				return false;
