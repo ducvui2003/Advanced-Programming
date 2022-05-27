@@ -1,4 +1,4 @@
-package Examples;
+package examples;
 
 public class Test {
 	public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class Test {
 		String s3 = "WElcome to Java";
 //		System.out.println("s1 == s2 is "+(s1==s2)); 
 //		System.out.println("s1 == s3 is "+(s1==s3)); 
-//		System.out.println(s1.compareTo(s2));
+		System.out.println(s1.compareTo(s2));
 //		System.out.println(s1.compareToIgnoreCase(s2));
 		System.out.println(s1.substring(0));
 		System.out.println(s1.substring(0, 11).length());

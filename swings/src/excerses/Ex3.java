@@ -3,6 +3,7 @@ package excerses;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 import javax.swing.ImageIcon;
@@ -18,6 +19,8 @@ import javax.swing.KeyStroke;
 
 public class Ex3 extends JFrame {
 	JMenuItem subMenuAdd, subMenuSubtract, subMenuMultiply, subMenuDivide;
+	JButton addBtn, subtractBtn, multiplyBtn, divideBtn;
+	JTextField field1, field2, fieldResult;
 
 	public Ex3() {
 		JMenuBar bar = new JMenuBar();
@@ -49,29 +52,62 @@ public class Ex3 extends JFrame {
 		add(p1);
 		JLabel number1 = new JLabel("Number 1");
 		p1.add(number1);
-		JTextField field1 = new JTextField(5);
+		field1 = new JTextField(5);
 		p1.add(field1);
 		JLabel number2 = new JLabel("Number 2");
 		p1.add(number2);
-		JTextField field2 = new JTextField(5);
+		field2 = new JTextField(5);
 		p1.add(field2);
 		JLabel result = new JLabel("Result");
 		p1.add(result);
-		JTextField field3 = new JTextField(5);
-		p1.add(field3);
-		field3.setEditable(false);
+		fieldResult = new JTextField(5);
+		p1.add(fieldResult);
+		fieldResult.setEditable(false);
 
 		JPanel p2 = new JPanel(new FlowLayout());
 		add(p2);
-		JButton add = new JButton("Add", new ImageIcon(getClass().getResource("..\\images\\addIcon.png")));
-		p2.add(add);
-		JButton subtract = new JButton("Subtract",new ImageIcon(getClass().getResource("..\\images\\subtractIcon.png")));
-		p2.add(subtract);
-		JButton multiply = new JButton("Multiply",new ImageIcon(getClass().getResource("..\\images\\multiplyIcon.png")));
-		p2.add(multiply);
-		JButton divide = new JButton("Divide", new ImageIcon(getClass().getResource("..\\images\\divideIcon.png")));
-		p2.add(divide);
+		addBtn = new JButton("Add", new ImageIcon(getClass().getResource("..\\images\\addIcon.png")));
+		p2.add(addBtn);
+		subtractBtn = new JButton("Subtract", new ImageIcon(getClass().getResource("..\\images\\subtractIcon.png")));
+		p2.add(subtractBtn);
+		multiplyBtn = new JButton("Multiply", new ImageIcon(getClass().getResource("..\\images\\multiplyIcon.png")));
+		p2.add(multiplyBtn);
+		divideBtn = new JButton("Divide", new ImageIcon(getClass().getResource("..\\images\\divideIcon.png")));
+		p2.add(divideBtn);
 
+//		Listener
+		MyListener event = new MyListener();
+		addBtn.addActionListener(event);
+		subtractBtn.addActionListener(event);
+		multiplyBtn.addActionListener(event);
+		divideBtn.addActionListener(event);
+
+	}
+
+	class MyListener implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if (e.getSource() == addBtn) {
+				double number1 = Double.parseDouble(field1.getText());
+				double number2 = Double.parseDouble(field2.getText());
+				fieldResult.setText((number1 + number2) + "");
+			}
+			if (e.getSource() == subtractBtn) {
+				double number1 = Double.parseDouble(field1.getText());
+				double number2 = Double.parseDouble(field2.getText());
+				fieldResult.setText((number1 - number2) + "");
+			}
+			if (e.getSource() == multiplyBtn) {
+				double number1 = Double.parseDouble(field1.getText());
+				double number2 = Double.parseDouble(field2.getText());
+				fieldResult.setText((number1 * number2) + "");
+			}
+			if (e.getSource() == divideBtn) {
+				double number1 = Double.parseDouble(field1.getText());
+				double number2 = Double.parseDouble(field2.getText());
+				fieldResult.setText((number1 / number2) + "");
+			}
+		}
 	}
 
 	public static void main(String[] args) {

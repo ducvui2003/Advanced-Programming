@@ -22,9 +22,9 @@ public class Ex4 extends JFrame {
 		p1.setBorder(new TitledBorder("Change sign of traffic light"));
 		add(p1);
 
-		p1.add(red = new JLabel("-Red"));
-		p1.add(green = new JLabel("-Green"));
-		p1.add(yellow = new JLabel("-Yellow"));
+		p1.add(red = new JLabel("- Red"));
+		p1.add(green = new JLabel("- Green"));
+		p1.add(yellow = new JLabel("- Yellow"));
 
 		JPanel p2 = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		add(p2);
@@ -40,13 +40,27 @@ public class Ex4 extends JFrame {
 
 		MyListener event = new MyListener();
 		signGreen.addActionListener(event);
+		signYellow.addActionListener(event);
+		signRed.addActionListener(event);
 	}
 
 	class MyListener implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == signGreen) {
-				green = new JLabel("Green: You choose green");
+				green.setText("- Green: You choose green");
+				red.setText("- Red");
+				yellow.setText("- Yellow");
+			}
+			if (e.getSource() == signRed) {
+				green.setText("- Green");
+				red.setText("- Red: You choose green");
+				yellow.setText("- Yellow");
+			}
+			if (e.getSource() == signYellow) {
+				green.setText("- Green");
+				red.setText("- Red");
+				yellow.setText("- Yellow: You choose green");
 			}
 
 		}
