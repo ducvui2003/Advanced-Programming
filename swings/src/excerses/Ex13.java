@@ -6,6 +6,7 @@ import java.awt.Label;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -15,6 +16,10 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 public class Ex13 extends JFrame {
+	String[] day = new String[31];
+	String[] month = new String[12];
+	String[] year = new String[1000];
+
 	public Ex13() {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -31,6 +36,27 @@ public class Ex13 extends JFrame {
 		JPanel pn2 = new JPanel();
 		add(pn2);
 		pn2.add(new JLabel("Ngay sinh"));
+//	Day field
+		for (int i = 0; i < day.length; i++) {
+			int number = i + 1;
+			day[i] = "" + number;
+		}
+		JComboBox dayField = new JComboBox(day);
+		pn2.add(dayField);
+//	Month Field	
+		for (int i = 0; i < month.length; i++) {
+			int number = i + 1;
+			month[i] = "" + number;
+		}
+		JComboBox monthField = new JComboBox(month);
+		pn2.add(monthField);
+//	Year Field	
+		for (int i = 0; i < year.length; i++) {
+			int number = i + 1950;
+			year[i] = "" + number;
+		}
+		JComboBox yearField = new JComboBox(year);
+		pn2.add(yearField);
 
 //	pn3
 		JPanel pn3 = new JPanel();

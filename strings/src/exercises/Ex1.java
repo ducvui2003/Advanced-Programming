@@ -4,9 +4,11 @@ public class Ex1 {
 	public static void main(String[] args) {
 		String s = "Welcome to Java";
 		System.out.print("-Number letter of String: ");
-		countLetter(s);	
+		countLetter(s);
 		System.out.println("-Print a leter in 1 line: ");
 		toCharArray(s);
+		System.out.println("Reverse String: "+reverseString(s));
+		
 	}
 
 	private static void countLetter(String s) {
@@ -15,20 +17,16 @@ public class Ex1 {
 	}
 
 	private static void toCharArray(String s) {
-		char[] chars = s.toCharArray();
-		for (int i = 0; i < chars.length; i++) {
-			System.out.println("\t" + chars[i]);
+		String[] tokens = s.split(" ");
+		for (int i = 0; i < tokens.length; i++) {
+			System.out.println("\t" + tokens[i]);
 		}
 	}
 
-	private static void reverseString(String s) {
-		char[] chars = s.toCharArray();
-		for (int i = 0; i < chars.length/2; i++) {
-		char temp;
-		temp = chars[chars.length-i];
-		
-		}
-		
+	private static StringBuilder reverseString(String s) {
+//	Convert String -> String builder to use reverse method		
+		StringBuilder string = new StringBuilder(s);
+		return string.reverse();
 	}
 
 }

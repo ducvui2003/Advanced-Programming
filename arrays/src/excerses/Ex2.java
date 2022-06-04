@@ -1,28 +1,38 @@
 package excerses;
 
+import java.awt.GridLayout;
 import java.util.Random;
 
-public class Ex2 {
-	public static void main(String[] args) {
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Ex2 extends JFrame {
 //	Create Random and size array
-		Random rd = new Random();
-		int sizeArray = rd.nextInt(10) + 5;
+	public static Random rd = new Random();
+	public static int sizeArray = rd.nextInt(10) + 5;
 //	Create array and apply method
-		int[] myList = createArray(sizeArray);
-		printArray(myList);
+	public static int[] myList = createArray(sizeArray);
+
+	public static void main(String[] args) {
 		int max = getMax(myList);
 		int times = numberOfTimes(myList, max);
-
-		System.out.println("\n-Max number is: " + max);
+		System.out.println("-Number of element in array is: " + sizeArray);
+		System.out.println("-Elements: " + printArray(myList));
+		System.out.println("-Max number is: " + max);
 		System.out.println("-Times of max number appear in array is " + times);
+
+		Ex2 frame = new Ex2();
+		frame.setTitle("Ex2");
+		frame.pack();
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		frame.setVisible(true);
 	}
 
 	public static int[] createArray(int n) {
 //		1. Declare and create array
 		int[] myList = new int[n];
-		Random rd = new Random();
 //		2. Assign value for array
-		System.out.println("-Number of element in array is: " + n);
 		for (int i = 0; i < n; i++) {
 			int temp = rd.nextInt(20);
 			myList[i] = temp;
@@ -30,11 +40,15 @@ public class Ex2 {
 		return myList;
 	}
 
-	private static void printArray(int[] array) {
-		System.out.print("-Elements: ");
+	private static StringBuilder printArray(int[] array) {
+
+		StringBuilder string = new StringBuilder();
 		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + "\t");
+
+			string.append(array[i]);
+			string.append(" ");
 		}
+		return string;
 	}
 
 	public static int getMax(int[] args) {
@@ -55,5 +69,19 @@ public class Ex2 {
 			}
 		}
 		return times;
+	}
+
+	public Ex2() {
+		setLayout(new GridLayout(0, 2));
+		add(new JLabel("So phan tu"));
+		add(new JLabel("" + sizeArray));
+		add(new JLabel("Mang"));
+		add(new JLabel("" + printArray(myList)));
+		add(new JLabel("Phan tu lon nhat"));
+		add(new JLabel("" + getMax(myList)));
+		add(new JLabel("So lan xuat hien"));
+		add(new JLabel("" + numberOfTimes(myList, getMax(myList))));
+		
+	
 	}
 }

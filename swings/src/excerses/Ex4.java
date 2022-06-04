@@ -1,5 +1,6 @@
 package excerses;
 
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -10,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 public class Ex4 extends JFrame {
@@ -32,7 +34,6 @@ public class Ex4 extends JFrame {
 		p2.add(signRed = new JRadioButton("Red"));
 		p2.add(signGreen = new JRadioButton("Green"));
 		p2.add(signYellow = new JRadioButton("Yellow"));
-
 		ButtonGroup btg = new ButtonGroup();
 		btg.add(signRed);
 		btg.add(signGreen);

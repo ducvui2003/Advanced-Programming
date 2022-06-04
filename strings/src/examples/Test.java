@@ -16,7 +16,11 @@ public class Test {
 		System.out.println(s1.substring(0, 11).length());
 		System.out.println(s1.substring(0, 11));
 		System.out.println(s1.split(s));
-		System.out.println(s1.replaceAll(s1, s3 ));
+		System.out.println(s1.replaceAll(s1, s3));
 //		System.out.println(s1.concat(s2));
+		System.out.println(s1.indexOf("Java",5));;
+		System.out.println(s1.lastIndexOf("o",5));;
+		System.out.println(s1.lastIndexOf("o",5));
+		System.out.println('0'+1);
 	}
 }
