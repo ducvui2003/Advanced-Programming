@@ -24,7 +24,7 @@ public class Ex7 extends JFrame {
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
 				int index = lstColor.getSelectedIndex();
-
+				System.out.println(index);
 				contentPane.setBackground(Color.black);
 			}
 

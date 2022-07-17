@@ -1,6 +1,5 @@
 package excerses;
 
-import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -11,7 +10,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 public class Ex4 extends JFrame {
@@ -24,16 +22,16 @@ public class Ex4 extends JFrame {
 		p1.setBorder(new TitledBorder("Change sign of traffic light"));
 		add(p1);
 
-		p1.add(red = new JLabel("- Red"));
-		p1.add(green = new JLabel("- Green"));
-		p1.add(yellow = new JLabel("- Yellow"));
+		p1.add(red = new JLabel("- Red:"));
+		p1.add(green = new JLabel("- Green:"));
+		p1.add(yellow = new JLabel("- Yellow:"));
 
 		JPanel p2 = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		add(p2);
 		p2.add(new JLabel("Choose sign:"));
-		p2.add(signRed = new JRadioButton("Red"));
-		p2.add(signGreen = new JRadioButton("Green"));
-		p2.add(signYellow = new JRadioButton("Yellow"));
+		p2.add(signRed = new JRadioButton("Red:"));
+		p2.add(signGreen = new JRadioButton("Green:"));
+		p2.add(signYellow = new JRadioButton("Yellow:"));
 		ButtonGroup btg = new ButtonGroup();
 		btg.add(signRed);
 		btg.add(signGreen);
@@ -50,17 +48,17 @@ public class Ex4 extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == signGreen) {
 				green.setText("- Green: You choose green");
-				red.setText("- Red");
-				yellow.setText("- Yellow");
+				red.setText("- Red:");
+				yellow.setText("- Yellow:");
 			}
 			if (e.getSource() == signRed) {
-				green.setText("- Green");
+				green.setText("- Green:");
 				red.setText("- Red: You choose green");
-				yellow.setText("- Yellow");
+				yellow.setText("- Yellow:");
 			}
 			if (e.getSource() == signYellow) {
-				green.setText("- Green");
-				red.setText("- Red");
+				green.setText("- Green:");
+				red.setText("- Red:");
 				yellow.setText("- Yellow: You choose green");
 			}
 

@@ -28,6 +28,14 @@ public class QuotientWithException {
 //		}
 //		System.out.println("Continue after the catch block");
 //	}
+//handleEvent(5, 0);
+	}
 
+	public static void handleEvent(int number1, int number2) {
+		try {
+			System.out.println(number1 / number2);
+		} catch (ArithmeticException e) {
+			System.out.println("Error");
+		}
 	}
 }

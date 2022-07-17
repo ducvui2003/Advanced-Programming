@@ -5,8 +5,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class JButtonIcons extends JFrame {
-	ImageIcon usIcon = new ImageIcon(
-			"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\american_flag.gif");
+	ImageIcon usIcon = new ImageIcon(getClass().getResource("..\\src\\images\\american_flag.gif"));
 	ImageIcon caIcon = new ImageIcon(
 			"D:\\University\\Year_1\\Advanced Programming\\Advanced\\swings\\src\\images\\canada_flag.gif");
 	ImageIcon geIcon = new ImageIcon(

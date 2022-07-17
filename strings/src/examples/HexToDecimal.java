@@ -2,7 +2,7 @@ package examples;
 
 import java.util.Scanner;
 
-public class hexToDecimal {
+public class HexToDecimal {
 	public static int hexToDecimal(String hex) {
 		char[] chars = hex.toCharArray();
 		int decimalValue = 0;

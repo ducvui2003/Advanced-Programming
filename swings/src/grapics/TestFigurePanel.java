@@ -37,11 +37,12 @@ public class TestFigurePanel extends JFrame {
 		private int type = 1;
 		private boolean filled = false;
 
+//		Draw 
 		public FigurePanel(int type) {
 			super();
 			this.type = type;
 		}
-
+//		Filled
 		public FigurePanel(int type, boolean filled) {
 			super();
 			this.type = type;
@@ -80,7 +81,6 @@ public class TestFigurePanel extends JFrame {
 				g.setColor(Color.black);
 				g.drawLine(10, 10, width - 10, height - 10);
 				g.drawLine(width - 10, 10, 10, height - 10);
-
 				break;
 			case RECTANGLE:
 				g.setColor(Color.blue);

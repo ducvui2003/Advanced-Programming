@@ -61,7 +61,7 @@ public class Ex5 extends JFrame {
 		txtName.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseExited(MouseEvent e) {
-				String result = String.format("%s", txtName.getText());
+				String result = txtName.getText();
 				txtNameShow.setText(result);
 			}
 		});
@@ -73,8 +73,22 @@ public class Ex5 extends JFrame {
 				txtMoneyShow.setText(result);
 			}
 		});
-		maleBtn.addActionListener(new BtnListener());
-		famaleBtn.addActionListener(new BtnListener());
+//		maleBtn.addActionListener(new BtnListener());
+//		famaleBtn.addActionListener(new BtnListener());
+		maleBtn.addMouseListener(new MouseAdapter() {
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			super.mouseClicked(e);
+			txtGenderShow.setText("Nam");
+		}
+		});
+		famaleBtn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				txtGenderShow.setText("Nu");
+			}
+		});
 	}
 
 //	Handle for maleBtn and famaleBtn

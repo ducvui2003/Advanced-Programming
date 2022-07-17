@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 public class Ex2 extends JFrame {
 	public Ex2() {
 		JPanel p1 = new JPanel();
+		setLayout(new BorderLayout());
 		p1.setLayout(new GridLayout(4, 3));
 
 		for (int i = 1; i <= 9; i++) {
@@ -23,10 +24,10 @@ public class Ex2 extends JFrame {
 
 		JPanel p2 = new JPanel(new BorderLayout());
 		p2.add(new JTextField("Time to be displayed here"), BorderLayout.NORTH);
-		p2.add(p1, BorderLayout.CENTER);
+		p2.add(p1, BorderLayout.SOUTH);
 
 		add(p2, BorderLayout.WEST);
-		add(new JButton("Food to placed here"), BorderLayout.CENTER);
+		add(new JButton("Food to placed here"), BorderLayout.SOUTH);
 	}
 
 	public static void main(String[] args) {

@@ -1,6 +1,5 @@
 package exercisesGrapics;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.Panel;

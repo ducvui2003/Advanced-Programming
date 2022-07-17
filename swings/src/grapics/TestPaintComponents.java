@@ -1,6 +1,5 @@
 package grapics;
 
-import java.awt.FlowLayout;
 import java.awt.Graphics;
 
 import javax.swing.JFrame;
@@ -28,7 +27,6 @@ public class TestPaintComponents extends JFrame {
 			super.paintComponent(g);
 			g.drawLine(0, 0, 50, 50);
 			g.drawString("Bannen here", 0, 40);
-
 		}
 
 	}

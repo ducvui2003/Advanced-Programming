@@ -1,7 +1,10 @@
 package excerses;
 
+import java.awt.Component;
 import java.awt.FlowLayout;
+import java.awt.Graphics;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -80,9 +83,8 @@ public class Ex1 extends JFrame {
 			else if (e.getSource() == devideBtn)
 				equal = n1 / n2;
 			
-			if (e.getSource() == equalBtn) {
+			if (e.getSource() == equalBtn) 
 				tfEqual.setText(equal + "");
-			}
 		}
 	}
 

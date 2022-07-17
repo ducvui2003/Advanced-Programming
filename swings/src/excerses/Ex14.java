@@ -15,12 +15,12 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
-public class Ex13 extends JFrame {
+public class Ex14 extends JFrame {
 	String[] day = new String[31];
 	String[] month = new String[12];
 	String[] year = new String[1000];
 
-	public Ex13() {
+	public Ex14() {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		JMenu file = new JMenu("File");
@@ -97,7 +97,7 @@ public class Ex13 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ex13 frame = new Ex13();
+		Ex14 frame = new Ex14();
 		frame.setTitle("Ly Lich Sv");
 		frame.setVisible(true);
 		frame.setLocationRelativeTo(null);

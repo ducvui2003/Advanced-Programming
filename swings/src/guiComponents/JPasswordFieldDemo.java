@@ -12,11 +12,11 @@ public class JPasswordFieldDemo extends JFrame {
 		JLabel lbPassword = new JLabel("Password: ");
 		add(lbPassword);
 		JPasswordField tfPassword = new JPasswordField(20);
-		tfPassword.setEchoChar('.');
+		tfPassword.setEchoChar('*');
 		add(tfPassword);
 		setVisible(true);
 		pack();
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 	}
 
